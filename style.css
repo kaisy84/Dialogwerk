@@ -1,18 +1,5 @@
 /* ===================================
-   GRUNDLAYOUT & FARBEN
-=================================== */
-
-body {
-    margin: 0;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    color: #3F2F2F; /* warmes Espresso-Dunkelbraun */
-    background: #F7F3EF; /* warmes Off-White */
-}
-
-
-
-/* ===================================
-   HEADER & NAVIGATION
+   HEADER & NAVIGATION – KORRIGIERT
 =================================== */
 
 .header {
@@ -20,21 +7,23 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 18px 6%;
-    background: #3F2F2F; 
+    background: #3F2F2F;  /* dunkler Hintergrund */
     border-bottom: 1px solid #D9A78A;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
+/* LOGO */
 .logo {
     font-size: 28px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #F7F3EF;
+    color: #F7F3EF;  /* heller Text */
     font-family: "Playfair Display", serif;
 }
 
+/* NAVIGATION – SICHTBAR GEMACHT */
 .nav {
     display: flex;
     gap: 32px;
@@ -42,7 +31,7 @@ body {
 
 .nav a {
     text-decoration: none;
-    color: #F7F3EF;
+    color: #F7F3EF !important; /* WICHTIG: sichtbar auf dem dunklen Balken */
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.3px;
@@ -55,7 +44,7 @@ body {
     border-bottom: 2px solid #C6A27E;
 }
 
-/* Mobile Menü Icon */
+/* MOBILE MENU ICON */
 .menu-icon {
     display: none;
     font-size: 32px;
@@ -63,6 +52,7 @@ body {
     color: #F7F3EF;
 }
 
+/* MOBILE NAVIGATION */
 @media (max-width: 780px) {
 
     .nav {
@@ -84,6 +74,7 @@ body {
         font-size: 18px;
         padding: 6px 0;
         border-bottom: none;
+        color: #F7F3EF !important; /* auch mobil sichtbar */
     }
 
     .menu-icon {
@@ -98,184 +89,9 @@ body {
 
 
 
-/* ===================================
-   TYPOGRAFIE
-=================================== */
-
-h1, h2, h3, h4 {
-    font-family: "Playfair Display", serif;
-    color: #3F2F2F;
-    line-height: 1.25;
-    letter-spacing: 0.5px;
-}
 
 
 
-/* ===================================
-   HERO-BEREICH
-=================================== */
-
-.hero {
-    padding: 120px 5%;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 56px;
-    margin-bottom: 10px;
-}
-
-.hero h2 {
-    font-size: 26px;
-    color: #7A6A6A;
-    margin-bottom: 18px;
-}
-
-.hero p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-    color: #4F3F3F;
-}
-
-.cta {
-    display: inline-block;
-    padding: 12px 22px;
-    background: #C6A27E;
-    color: #3F2F2F;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-}
-
-.cta:hover {
-    background: #B8926F;
-}
 
 
-
-/* ===================================
-   SEKTIONEN
-=================================== */
-
-.section {
-    padding: 80px 5%;
-    text-align: center;
-}
-
-/* Überschriften mit Linie */
-.section h3 {
-    font-size: 32px;
-    margin-bottom: 30px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 8px;
-}
-
-.section h3::after {
-    content: "";
-    position: absolute;
-    width: 60%;
-    height: 3px;
-    background: #C6A27E;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-
-
-/* ===================================
-   LEISTUNGS-KARTEN
-=================================== */
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-}
-
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 6px;
-    border-left: 5px solid #D9A78A;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-}
-
-.card h4 {
-    margin-top: 0;
-    font-size: 20px;
-}
-
-
-
-/* ===================================
-   TEXTE IN ÜBER-MICH
-=================================== */
-
-.uebertext,
-.kontakt-text {
-    max-width: 720px;
-    margin: 0 auto;
-    line-height: 1.7;
-}
-
-
-
-/* ===================================
-   KONTAKTFORMULAR
-=================================== */
-
-.kontaktform {
-    max-width: 500px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.kontaktform input,
-.kontaktform textarea {
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #C6A27E;
-    background: white;
-    font-size: 15px;
-}
-
-.kontaktform button {
-    padding: 12px;
-    background: #C6A27E;
-    color: #3F2F2F;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-.kontaktform button:hover {
-    background: #B8926F;
-}
-
-
-
-/* ===================================
-   FOOTER
-=================================== */
-
-footer {
-    background: #3F2F2F;
-    color: #F7F3EF;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-}
-
-footer a {
-    color: #F7F3EF;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
 
