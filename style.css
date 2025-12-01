@@ -25,7 +25,7 @@
 
 /* NAVIGATION – SICHTBAR GEMACHT */
 .nav {
-    display: flex;
+    display: flex !important;
     gap: 32px;
 }
 
