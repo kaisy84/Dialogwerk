@@ -1,5 +1,17 @@
 /* ===================================
-   HEADER & NAVIGATION – KORRIGIERT
+   GRUNDLAYOUT & FARBEN
+=================================== */
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: #3F2F2F;
+    background: #F7F3EF;
+}
+
+
+/* ===================================
+   HEADER / NAVIGATION
 =================================== */
 
 .header {
@@ -7,35 +19,30 @@
     justify-content: space-between;
     align-items: center;
     padding: 18px 6%;
-    background: #3F2F2F;  /* dunkler Hintergrund */
-    border-bottom: 1px solid #D9A78A;
+    background: #3F2F2F;
+    color: #F7F3EF;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* LOGO */
 .logo {
+    font-family: "Playfair Display", serif;
     font-size: 28px;
     font-weight: 600;
-    letter-spacing: 1px;
-    color: #F7F3EF;  /* heller Text */
-    font-family: "Playfair Display", serif;
 }
 
-/* NAVIGATION – SICHTBAR GEMACHT */
 .nav {
-    display: flex !important;
+    display: flex;
     gap: 32px;
 }
 
 .nav a {
     text-decoration: none;
-    color: #F7F3EF !important; /* WICHTIG: sichtbar auf dem dunklen Balken */
+    color: #F7F3EF;
     font-size: 16px;
     font-weight: 500;
-    letter-spacing: 0.3px;
-    transition: 0.2s ease-in-out;
+    transition: 0.2s;
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
 }
@@ -44,48 +51,201 @@
     border-bottom: 2px solid #C6A27E;
 }
 
-/* MOBILE MENU ICON */
+/* Mobile Icon */
 .menu-icon {
     display: none;
     font-size: 32px;
     cursor: pointer;
-    color: #F7F3EF;
 }
 
-/* MOBILE NAVIGATION */
-@media (max-width: 780px) {
+@media (max-width: 768px) {
 
     .nav {
         display: none;
         flex-direction: column;
+        background: #3F2F2F;
         position: absolute;
         top: 72px;
         right: 0;
-        background: #3F2F2F;
-        width: 72%;
-        padding: 25px;
-        border-left: 1px solid #D9A78A;
-        border-bottom: 1px solid #D9A78A;
-        gap: 16px;
-        animation: fade-in 0.2s ease;
+        width: 70%;
+        padding: 20px;
+        border-left: 1px solid #C6A27E;
+        border-bottom: 1px solid #C6A27E;
+        animation: fadeIn 0.2s ease;
     }
 
-    .nav a {
-        font-size: 18px;
-        padding: 6px 0;
-        border-bottom: none;
-        color: #F7F3EF !important; /* auch mobil sichtbar */
+    .nav.open {
+        display: flex !important;
     }
 
     .menu-icon {
         display: block;
+        color: #F7F3EF;
     }
 
-    @keyframes fade-in {
-        from { opacity: 0; transform: translateY(-5px); }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-3px); }
         to { opacity: 1; transform: translateY(0); }
     }
 }
+
+
+/* ===================================
+   HERO
+=================================== */
+
+.hero {
+    text-align: center;
+    padding: 120px 5%;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 56px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 26px;
+    color: #6A5A5A;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+}
+
+.cta {
+    display: inline-block;
+    background: #C6A27E;
+    padding: 12px 22px;
+    color: #3F2F2F;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.cta:hover {
+    background: #B8926F;
+}
+
+
+/* ===================================
+   SEKTIONEN
+=================================== */
+
+.section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.section h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    margin-bottom: 35px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section h3::after {
+    content: "";
+    background: #C6A27E;
+    width: 60%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Grid für Leistungen */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 6px;
+    border-left: 5px solid #D9A78A;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.card h4 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+
+/* ===================================
+   TEXTE
+=================================== */
+
+.uebertext {
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+
+/* ===================================
+   KONTAKTFORMULAR
+=================================== */
+
+.kontaktform {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.kontaktform input,
+.kontaktform textarea {
+    padding: 12px;
+    border: 1px solid #C6A27E;
+    background: #FFF;
+}
+
+.kontaktform button {
+    padding: 12px;
+    background: #C6A27E;
+    color: #3F2F2F;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.kontaktform button:hover {
+    background: #B8926F;
+}
+
+
+/* ===================================
+   FOOTER
+=================================== */
+
+footer {
+    background: #3F2F2F;
+    padding: 20px;
+    text-align: center;
+    color: #F7F3EF;
+    margin-top: 60px;
+}
+
+footer a {
+    color: #F7F3EF;
+}
+
+
+
+
+      
 
 
 
