@@ -266,6 +266,61 @@ footer a {
     border-left: 5px solid #D9A78A !important;
     box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
 }
+/* ===================================
+   VERBESSERTE LEISTUNGSKARTEN (PRO VERSION)
+=================================== */
+
+/* Grid – sorgt dafür, dass alle Karten gleich groß werden */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    align-items: stretch; /* zwingt gleiche Höhen */
+}
+
+/* Karten-Styling – gleiche Höhe, sauberer Innenabstand, eleganter Look */
+.card {
+    background: #FFFFFF;
+    padding: 28px;
+    border-radius: 8px;
+    border-left: 5px solid #D9A78A;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s ease;
+}
+
+/* Hover-Effekt – leicht angehoben + weicher Schatten */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Interne Abstände der Texte */
+.card h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-top: 0;
+    line-height: 1.6;
+    color: #4F3F3F;
+}
+
+/* RESPONSIVE (optional, aber sehr sinnvoll) */
+@media (max-width: 1100px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 
