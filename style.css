@@ -324,6 +324,14 @@ footer a {
         grid-template-columns: 1fr;
     }
 }
+/* Goldener Divider unter dem Hero-Titel */
+.hero-divider {
+    width: 120px;
+    height: 4px;
+    background: #C6A27E;
+    margin: 20px auto 30px;
+    border-radius: 2px;
+}
 
 
 
