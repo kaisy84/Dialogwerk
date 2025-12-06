@@ -111,9 +111,11 @@ body {
 =================================== */
 
 .hero {
-    padding: 120px 5%;
-    text-align: center;
-    background: linear-gradient(#F7F3EF, #F0ECE7);
+  background: linear-gradient(#F7F3EF, #ECE9E4);
+  padding: 150px 5% 140px;
+  text-align: center;
+}
+
 }
 
 }
