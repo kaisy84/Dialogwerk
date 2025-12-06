@@ -179,10 +179,11 @@ body {
 
 /* Grid für Leistungen */
 .grid {
-    .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 Spalten */
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
+}
+
 }
 
 }
