@@ -49,7 +49,7 @@ body {
 .nav {
     display: flex;
     gap: 40px;
-   align-items: center;
+   
 }
 
 .nav a {
@@ -60,6 +60,7 @@ body {
     transition: 0.2s;
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
+    padding: 0 6px;
 }
 
 .nav a:hover {
