@@ -400,6 +400,29 @@ footer a {
     margin: 20px auto 30px;
     border-radius: 2px;
 }
+/* Erfolgsmeldung */
+.success-message {
+    display: none;
+    background: #E3F5E8;
+    color: #2F6B3F;
+    border-left: 4px solid #3FAF60;
+    padding: 14px 18px;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 
