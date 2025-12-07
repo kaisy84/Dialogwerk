@@ -392,13 +392,16 @@ footer a {
         grid-template-columns: 1fr;
     }
 }
-/* Goldener Divider unter dem Hero-Titel */
+/* Neue, breite goldene Linie im Hero */
 .hero-divider {
-    width: 120px;
+    width: 180px;          /* Breiter, wirkt professioneller */
     height: 4px;
-    background: #C6A27E;
-    margin: 20px auto 30px;
-    border-radius: 2px;
+    background: #C6A27E;   /* Gold-Ton */
+    margin: 28px auto 35px;
+    border-radius: 3px;    /* Edle Abrundung */
+    opacity: 0.85;         /* Leicht zurückgenommen – sehr elegant */
+}
+
 }
 /* Erfolgsmeldung */
 .success-message {
