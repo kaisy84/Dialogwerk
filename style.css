@@ -225,36 +225,93 @@ body {
 
 
 /* ===================================
-   KONTAKTFORMULAR
+   KONTAKTFORMULAR – PREMIUM VERSION
 =================================== */
 
+#kontakt {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.kontakt-subline {
+    font-size: 18px;
+    color: #6A5A5A;
+    margin-bottom: 30px;
+}
+
 .kontaktform {
-    max-width: 500px;
-    margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 18px;
 }
 
 .kontaktform input,
 .kontaktform textarea {
-    padding: 12px;
+    padding: 14px 16px;
     border: 1px solid #C6A27E;
     background: #FFF;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    font-family: "Inter", sans-serif;
 }
 
+/* Fokus-Effekt */
+.kontaktform input:focus,
+.kontaktform textarea:focus {
+    outline: none;
+    border-color: #B8926F;
+    box-shadow: 0 0 6px rgba(198,162,126,0.35);
+}
+
+/* Textarea hübscher */
+.kontaktform textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* Button */
 .kontaktform button {
-    padding: 12px;
+    padding: 14px;
     background: #C6A27E;
     color: #3F2F2F;
     border: none;
+    border-radius: 6px;
     cursor: pointer;
     font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    transition: all 0.25s ease;
 }
 
+/* Button Hover */
 .kontaktform button:hover {
     background: #B8926F;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
+
+/* Kleine Eingangsanimation */
+.kontaktform input,
+.kontaktform textarea,
+.kontaktform button {
+    opacity: 0;
+    transform: translateY(6px);
+    animation: fadeInUp 0.4s ease forwards;
+}
+
+.kontaktform input:nth-child(1) { animation-delay: 0.05s; }
+.kontaktform input:nth-child(2) { animation-delay: 0.10s; }
+.kontaktform textarea        { animation-delay: 0.15s; }
+.kontaktform button          { animation-delay: 0.20s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 
 /* ===================================
