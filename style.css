@@ -111,23 +111,19 @@ body {
 =================================== */
 
 .hero {
-    padding: 160px 5% 140px;
+    padding: 120px 5% 90px;
     text-align: center;
 
-    /* Deutlich sichtbarer, edler Verlauf */
     background: linear-gradient(
         180deg,
         #F7F3EF 0%,
-        #ECE8E2 40%,
+        #ECE8E2 35%,
         #E7E2DB 100%
     );
 
-    border-bottom: 1px solid #D9A78A33; /* sanfte Trennung */
+    border-bottom: 1px solid #D9A78A33;
 }
 
-
-    border-bottom: 1px solid #D9A78A33; /* sanfte Trennung */
-}
 
 .hero h1 {
     font-family: "Playfair Display", serif;
