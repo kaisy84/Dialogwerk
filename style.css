@@ -426,6 +426,15 @@ footer a {
         transform: translateY(0);
     }
 }
+/* Hero-Divider – Premium-Variante */
+.hero-divider {
+    width: 260px !important;         /* sichtbar breiter */
+    height: 5px !important;          /* etwas kräftiger */
+    background: #C6A27E !important;  /* Gold */
+    margin: 32px auto 40px !important;
+    border-radius: 4px !important;
+    opacity: 1 !important;           /* volle Sichtbarkeit */
+}
 
 
 
