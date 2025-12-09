@@ -518,6 +518,24 @@ footer a {
     margin-bottom: 18px;
     color: #4F3F3F;
 }
+/* Einheitliche Darstellung des Kontaktformulars auf allen Seiten */
+.section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.kontaktform {
+    max-width: 500px;
+    margin: 30px auto 0 auto;
+}
+
+.kontakt-text {
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    font-size: 18px;
+    color: #4F3F3F;
+    line-height: 1.6;
+}
 
 
 
