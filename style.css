@@ -518,6 +518,26 @@ footer a {
     margin-bottom: 18px;
     color: #4F3F3F;
 }
+/* Kontaktseite Layout */
+.contact-page .section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Formular schön zentrieren */
+.contact-page .kontaktform {
+    max-width: 500px;
+    margin: 30px auto 0 auto;
+}
+
+/* Textbreite passend machen */
+.contact-page .kontakt-text {
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    font-size: 18px;
+    color: #4F3F3F;
+    line-height: 1.6;
+}
 
 
 
