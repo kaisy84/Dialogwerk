@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Dialogwerk – Lerntherapie, LRS, ADHS & Schulbegleitung</title>
-  <meta name="description" content="Dialogwerk begleitet Kinder, Eltern und Familien bei Lernschwierigkeiten, LRS, ADHS, Schulkonflikten und schwieriger Kommunikation mit Schule." />
+  <meta name="description" content="Dialogwerk begleitet Familien mit Lerntherapie, Elternberatung und Schulbegleitung bei LRS, ADHS, Lernschwierigkeiten und Schulkonflikten." />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,9 +13,11 @@
 <body>
 
 <header class="site-header">
-  <a href="index.html" class="logo">Dialogwerk</a>
+  <a class="logo" href="index.html">Dialogwerk</a>
 
-  <button class="menu-button" onclick="toggleMenu()">☰</button>
+  <button class="menu-button" onclick="toggleMenu()" aria-label="Menü öffnen">
+    ☰
+  </button>
 
   <nav class="main-nav" id="mainNav">
     <a href="index.html">Start</a>
@@ -29,137 +31,148 @@
 
 <main>
 
-<section class="hero">
-  <div class="hero-inner">
-    <p class="eyebrow">Lerntherapie · Elternberatung · Schulbegleitung</p>
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Lerntherapie · Elternberatung · Schulbegleitung</p>
 
-    <h1>Wenn Lernen, Schule und Kommunikation schwierig werden.</h1>
+      <h1>Gemeinsam Wege finden.</h1>
 
-    <p class="hero-text">
-      Dialogwerk begleitet Kinder, Eltern und Familien bei Lernschwierigkeiten,
-      LRS, ADHS, Schulkonflikten und belastenden Schulsituationen.
-    </p>
+      <p class="hero-text">
+        Für Familien, wenn Lernen, Schule oder Kommunikation zur Herausforderung werden.
+      </p>
 
-    <div class="hero-actions">
-      <a href="lerntherapie.html" class="button primary">Lerntherapie ansehen</a>
-      <a href="kontakt.html" class="button secondary">Kontakt aufnehmen</a>
+      <div class="hero-buttons">
+        <a href="lerntherapie.html" class="button dark">Lerntherapie</a>
+        <a href="kontakt.html" class="button light">Kontakt aufnehmen</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="intro section">
-  <div class="narrow">
-    <h2>Manchmal geht es längst nicht mehr nur ums Lernen.</h2>
-    <p>
-      Wenn Hausaufgaben täglich eskalieren, Gespräche mit der Schule belasten
-      oder ein Kind das Vertrauen in sich selbst verliert, brauchen Familien
-      mehr als schnelle Tipps.
-    </p>
-    <p>
-      Dialogwerk verbindet individuelle Lerntherapie mit Elternberatung und
-      klarer Unterstützung in der Kommunikation mit Schule und anderen
-      Beteiligten.
-    </p>
-  </div>
-</section>
+  <section class="section intro">
+    <div class="text-block">
+      <h2>Nicht jedes Schulproblem beginnt im Klassenzimmer.</h2>
 
-<section class="section soft">
-  <div class="section-heading">
-    <p class="eyebrow">Leistungen</p>
-    <h2>Drei Bereiche. Ein gemeinsamer Blick.</h2>
-  </div>
-
-  <div class="cards three">
-    <article class="card">
-      <h3>Lerntherapie</h3>
       <p>
-        Unterstützung bei LRS, Legasthenie, ADHS im Lernalltag,
-        Konzentrationsproblemen und allgemeinen Lernschwierigkeiten.
+        Manche Kinder verlieren die Freude am Lernen. Manche Eltern fühlen sich
+        zwischen Schule, Diagnosen und Förderempfehlungen allein.
       </p>
-      <a href="lerntherapie.html">Mehr zur Lerntherapie</a>
-    </article>
 
-    <article class="card">
-      <h3>Elternberatung</h3>
       <p>
-        Orientierung für Eltern, die Lernprobleme, Diagnosen, schulische
-        Anforderungen oder häusliche Belastungen besser verstehen möchten.
+        Und manchmal scheitert nicht das Kind – sondern die Kommunikation.
       </p>
-      <a href="elternberatung.html">Mehr zur Elternberatung</a>
-    </article>
 
-    <article class="card">
-      <h3>Schulbegleitung</h3>
       <p>
-        Gesprächsvorbereitung, Analyse schulischer Kommunikation,
-        Dokumentenprüfung und Prozessbegleitung bei schwierigen Schulsituationen.
-      </p>
-      <a href="schulbegleitung.html">Mehr zur Schulbegleitung</a>
-    </article>
-  </div>
-</section>
-
-<section class="section">
-  <div class="split">
-    <div>
-      <p class="eyebrow">Schwerpunkt Lerntherapie</p>
-      <h2>Lerntherapie bei LRS, ADHS und Lernblockaden</h2>
-      <p>
-        Dialogwerk unterstützt Kinder und Jugendliche, wenn Lesen, Schreiben,
-        Konzentration, Lernorganisation oder Motivation dauerhaft schwerfallen.
-      </p>
-      <p>
-        Im Mittelpunkt steht nicht nur die Leistung, sondern das Kind mit seinen
-        Erfahrungen, Stärken, Unsicherheiten und Bedürfnissen.
+        Dialogwerk begleitet Familien dort, wo Lernen, Beziehung und Schule
+        zusammenkommen.
       </p>
     </div>
+  </section>
 
-    <div class="list-box">
-      <h3>Typische Themen</h3>
-      <ul>
-        <li>LRS / Legasthenie</li>
-        <li>Leseflüssigkeit und Rechtschreibung</li>
-        <li>ADHS im Lernkontext</li>
-        <li>Konzentration und Selbststeuerung</li>
-        <li>Lernorganisation und Motivation</li>
-        <li>allgemeine Lernbegleitung</li>
-      </ul>
+  <section class="section services">
+    <div class="section-title">
+      <p class="eyebrow">Drei Wege der Unterstützung</p>
+      <h2>Was Dialogwerk anbietet</h2>
     </div>
-  </div>
-</section>
 
-<section class="section muted">
-  <div class="narrow center">
-    <p class="eyebrow">Haltung</p>
-    <h2>Klar. Bedürfnisorientiert. Systembewusst.</h2>
-    <p>
-      Dialogwerk betrachtet schulische Schwierigkeiten nicht isoliert.
-      Lernen, Emotionen, Familie, Schule und Kommunikation gehören zusammen.
-    </p>
-    <p>
-      Ziel ist nicht Anpassung um jeden Preis, sondern mehr Verstehen,
-      Selbstwirksamkeit und tragfähige nächste Schritte.
-    </p>
-  </div>
-</section>
+    <div class="service-grid">
 
-<section class="section cta-section">
-  <div class="narrow center">
-    <h2>Der erste Schritt darf einfach sein.</h2>
-    <p>
-      Schreiben Sie kurz, worum es geht. Gemeinsam klären wir, welche Form der
-      Unterstützung passend sein kann.
-    </p>
-    <a href="kontakt.html" class="button primary">Kontakt aufnehmen</a>
-  </div>
-</section>
+      <article class="service">
+        <span class="service-number">01</span>
+        <h3>Lerntherapie</h3>
+        <p>
+          Individuelle Begleitung bei LRS, Legasthenie, ADHS im Lernalltag,
+          Konzentrationsproblemen, Lernblockaden und allgemeiner Lernbegleitung.
+        </p>
+        <a href="lerntherapie.html">Mehr erfahren</a>
+      </article>
+
+      <article class="service">
+        <span class="service-number">02</span>
+        <h3>Elternberatung</h3>
+        <p>
+          Orientierung für Eltern, die Lernprobleme, schulische Belastungen,
+          Diagnosen oder familiäre Konflikte rund um Schule besser verstehen möchten.
+        </p>
+        <a href="elternberatung.html">Mehr erfahren</a>
+      </article>
+
+      <article class="service">
+        <span class="service-number">03</span>
+        <h3>Schulbegleitung</h3>
+        <p>
+          Unterstützung bei Schulgesprächen, Konflikten, Dokumentenprüfung,
+          schriftlicher Kommunikation und komplexen schulischen Prozessen.
+        </p>
+        <a href="schulbegleitung.html">Mehr erfahren</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section focus">
+    <div class="focus-inner">
+      <div>
+        <p class="eyebrow">Schwerpunkt Lerntherapie</p>
+        <h2>LRS, ADHS und Lernschwierigkeiten verstehen.</h2>
+      </div>
+
+      <div>
+        <p>
+          Lerntherapie bei Dialogwerk bedeutet nicht einfach mehr Üben.
+          Im Mittelpunkt steht das Kind mit seinen Erfahrungen, Stärken,
+          Unsicherheiten und seinem individuellen Lernweg.
+        </p>
+
+        <ul>
+          <li>LRS / Legasthenie</li>
+          <li>Lesen und Rechtschreibung</li>
+          <li>ADHS im Lernalltag</li>
+          <li>Konzentration und Selbststeuerung</li>
+          <li>Lernorganisation und Motivation</li>
+          <li>allgemeine Lernbegleitung</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section attitude">
+    <div class="text-block center">
+      <p class="eyebrow">Haltung</p>
+
+      <h2>Kinder sind mehr als ihre Schwierigkeiten.</h2>
+
+      <p>
+        Dialogwerk arbeitet ressourcenorientiert, klar und mit Blick auf das
+        gesamte Umfeld eines Kindes.
+      </p>
+
+      <p>
+        Ziel ist nicht Anpassung um jeden Preis, sondern mehr Verstehen,
+        Selbstwirksamkeit und tragfähige nächste Schritte.
+      </p>
+    </div>
+  </section>
+
+  <section class="section cta">
+    <div class="text-block center">
+      <h2>Sie müssen den Weg nicht allein gehen.</h2>
+
+      <p>
+        Ob Lerntherapie, Elternberatung oder Unterstützung im Kontakt mit der Schule –
+        gemeinsam klären wir, welcher nächste Schritt hilfreich ist.
+      </p>
+
+      <a href="kontakt.html" class="button dark">Kontakt aufnehmen</a>
+    </div>
+  </section>
 
 </main>
 
 <footer class="site-footer">
   <p>© Dialogwerk</p>
   <p>
-    <a href="impressum.html">Impressum</a> ·
+    <a href="impressum.html">Impressum</a>
+    <span>·</span>
     <a href="datenschutz.html">Datenschutz</a>
   </p>
 </footer>
@@ -172,7 +185,6 @@ function toggleMenu() {
 
 </body>
 </html>
-    
    
 
 
