@@ -1,540 +1,320 @@
-/* ===================================
-   GRUNDLAYOUT & FARBEN
-=================================== */
-
-body {
-    margin: 0;
-    font-family: "Inter", sans-serif;
-    color: #3F2F2F;
-    background: #F7F3EF;
+:root {
+  --bg: #f7f3ee;
+  --soft: #eee7df;
+  --muted: #e6ddd3;
+  --text: #352c28;
+  --text-light: #6f625a;
+  --dark: #332722;
+  --accent: #b98f6b;
+  --accent-dark: #9d7454;
+  --white: #ffffff;
+  --border: #d7c8bb;
 }
 
+* {
+  box-sizing: border-box;
+}
 
-/* ===================================
-   HEADER / NAVIGATION
-=================================== */
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 6%;
-    background: #3F2F2F;
-    color: #F7F3EF;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+a {
+  color: inherit;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 7%;
+  background: rgba(51, 39, 34, 0.96);
+  color: var(--white);
 }
 
 .logo {
-    color: #F7F3EF;
-    text-decoration: none;
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  font-weight: bold;
 }
 
-.logo:visited {
-    color: #F7F3EF;
+.main-nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
 }
 
-.logo:hover {
-    color: #C6A27E;
-    text-decoration: none;
+.main-nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  opacity: 0.92;
 }
 
-.nav {
-    display: flex;
-    gap: 40px;
-   
+.main-nav a:hover {
+  color: #e7c9a8;
 }
 
-.nav a {
-    text-decoration: none;
-    color: #F7F3EF;
-    font-size: 16px;
-    font-weight: 500;
-    transition: 0.2s;
-    padding-bottom: 4px;
-    border-bottom: 2px solid transparent;
-    padding: 0 6px;
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 2rem;
 }
-
-.nav a:hover {
-    border-bottom: 2px solid #C6A27E;
-}
-
-/* Mobile Icon */
-.menu-icon {
-    display: none;
-    font-size: 32px;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-
-    .nav {
-        display: none;
-        flex-direction: column;
-        background: #3F2F2F;
-        position: absolute;
-        top: 72px;
-        right: 0;
-        width: 70%;
-        padding: 20px;
-        border-left: 1px solid #C6A27E;
-        border-bottom: 1px solid #C6A27E;
-        animation: fadeIn 0.2s ease;
-    }
-
-    .nav.open {
-        display: flex !important;
-    }
-
-    .menu-icon {
-        display: block;
-        color: #F7F3EF;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-3px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-}
-
-
-/* ===================================
-   HERO
-=================================== */
 
 .hero {
-    padding: 120px 5% 90px;
-    text-align: center;
-
-    background: linear-gradient(
-        180deg,
-        #F7F3EF 0%,
-        #ECE8E2 35%,
-        #E7E2DB 100%
-    );
-
-    border-bottom: 1px solid #D9A78A33;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 7%;
+  background:
+    linear-gradient(rgba(247, 243, 238, 0.88), rgba(247, 243, 238, 0.95)),
+    radial-gradient(circle at top left, #e2d1c1, transparent 35%),
+    radial-gradient(circle at bottom right, #d8c2ad, transparent 35%);
 }
 
-
-.hero h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 48px;
-    margin-bottom: 10px;
+.hero-inner {
+  max-width: 900px;
+  text-align: center;
 }
 
-.hero h2 {
-    font-size: 26px;
-    color: #6A5A5A;
-    margin-bottom: 20px;
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  color: var(--accent-dark);
+  font-weight: bold;
+  margin-bottom: 14px;
 }
 
-.hero p {
-    max-width: 600px;
-    margin: 0 auto 30px;
-    font-size: 18px;
+h1,
+h2,
+h3 {
+  line-height: 1.18;
+  margin-top: 0;
 }
 
-.cta {
-    display: inline-block;
-    background: #C6A27E;
-    padding: 12px 22px;
-    color: #3F2F2F;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
+h1 {
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  margin-bottom: 24px;
 }
 
-.cta:hover {
-    background: #B8926F;
+h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 22px;
 }
 
+h3 {
+  font-size: 1.5rem;
+}
 
-/* ===================================
-   SEKTIONEN
-=================================== */
+.hero-text {
+  max-width: 720px;
+  margin: 0 auto 36px;
+  font-size: 1.25rem;
+  color: var(--text-light);
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.button.primary {
+  background: var(--dark);
+  color: var(--white);
+}
+
+.button.primary:hover {
+  background: var(--accent-dark);
+}
+
+.button.secondary {
+  border: 1px solid var(--dark);
+  color: var(--dark);
+}
+
+.button.secondary:hover {
+  background: var(--dark);
+  color: var(--white);
+}
 
 .section {
-    padding: 80px 5%;
-    text-align: center;
+  padding: 90px 7%;
 }
 
-.section h3 {
-    font-family: "Playfair Display", serif;
-    font-size: 32px;
-    margin-bottom: 35px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
+.soft {
+  background: var(--soft);
 }
 
-.section h3::after {
-    content: "";
-    background: #C6A27E;
-    width: 60%;
-    height: 3px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+.muted {
+  background: var(--muted);
 }
 
-/* Grid für Leistungen */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+.narrow {
+  max-width: 820px;
+  margin: 0 auto;
+}
 
+.center {
+  text-align: center;
+}
+
+.section-heading {
+  max-width: 800px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  gap: 24px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.cards.three {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .card {
-    background: white;
-    padding: 25px;
-    border-radius: 6px;
-    border-left: 5px solid #D9A78A;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 12px 30px rgba(51, 39, 34, 0.06);
 }
 
-.card h4 {
-    font-size: 20px;
-    margin-top: 0;
-}
-
-
-/* ===================================
-   TEXTE
-=================================== */
-
-.uebertext {
-    max-width: 720px;
-    margin: 0 auto;
-    line-height: 1.7;
-}
-
-
-/* ===================================
-   KONTAKTFORMULAR – PREMIUM VERSION
-=================================== */
-
-#kontakt {
-    max-width: 650px;
-    margin: 0 auto;
-}
-
-.kontakt-subline {
-    font-size: 18px;
-    color: #6A5A5A;
-    margin-bottom: 30px;
-}
-
-.kontaktform {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.kontaktform input,
-.kontaktform textarea {
-    padding: 14px 16px;
-    border: 1px solid #C6A27E;
-    background: #FFF;
-    border-radius: 6px;
-    font-size: 16px;
-    transition: all 0.2s ease;
-    font-family: "Inter", sans-serif;
-}
-
-/* Fokus-Effekt */
-.kontaktform input:focus,
-.kontaktform textarea:focus {
-    outline: none;
-    border-color: #B8926F;
-    box-shadow: 0 0 6px rgba(198,162,126,0.35);
-}
-
-/* Textarea hübscher */
-.kontaktform textarea {
-    min-height: 140px;
-    resize: vertical;
-}
-
-/* Button */
-.kontaktform button {
-    padding: 14px;
-    background: #C6A27E;
-    color: #3F2F2F;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 16px;
-    letter-spacing: 0.3px;
-    transition: all 0.25s ease;
-}
-
-/* Button Hover */
-.kontaktform button:hover {
-    background: #B8926F;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-}
-
-/* Kleine Eingangsanimation */
-.kontaktform input,
-.kontaktform textarea,
-.kontaktform button {
-    opacity: 0;
-    transform: translateY(6px);
-    animation: fadeInUp 0.4s ease forwards;
-}
-
-.kontaktform input:nth-child(1) { animation-delay: 0.05s; }
-.kontaktform input:nth-child(2) { animation-delay: 0.10s; }
-.kontaktform textarea        { animation-delay: 0.15s; }
-.kontaktform button          { animation-delay: 0.20s; }
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-
-/* ===================================
-   FOOTER
-=================================== */
-
-footer {
-    background: #3F2F2F;
-    padding: 20px;
-    text-align: center;
-    color: #F7F3EF;
-    margin-top: 60px;
-}
-
-footer a {
-    color: #F7F3EF;
-}
-/* Fix: Karten wieder als Blöcke anzeigen */
-.card {
-    background: white !important;
-    padding: 25px !important;
-    border-radius: 6px !important;
-    border-left: 5px solid #D9A78A !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
-}
-/* ===================================
-   VERBESSERTE LEISTUNGSKARTEN (PRO VERSION)
-=================================== */
-
-/* Grid – sorgt dafür, dass alle Karten gleich groß werden */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    align-items: stretch; /* zwingt gleiche Höhen */
-}
-
-/* Karten-Styling – gleiche Höhe, sauberer Innenabstand, eleganter Look */
-.card {
-    background: #FFFFFF;
-    padding: 28px;
-    border-radius: 8px;
-    border-left: 5px solid #D9A78A;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: all 0.25s ease;
-}
-
-/* Hover-Effekt – leicht angehoben + weicher Schatten */
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-}
-
-/* Interne Abstände der Texte */
-.card h4 {
-    margin-top: 0;
-    margin-bottom: 10px;
+.card h3 {
+  margin-bottom: 14px;
 }
 
 .card p {
-    margin-top: 0;
-    line-height: 1.6;
-    color: #4F3F3F;
+  color: var(--text-light);
 }
 
-/* RESPONSIVE (optional, aber sehr sinnvoll) */
-@media (max-width: 1100px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.card a {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent-dark);
+  font-weight: bold;
+  text-decoration: none;
 }
 
-@media (max-width: 600px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* Neue, breite goldene Linie im Hero */
-.hero-divider {
-    width: 180px;          /* Breiter, wirkt professioneller */
-    height: 4px;
-    background: #C6A27E;   /* Gold-Ton */
-    margin: 28px auto 35px;
-    border-radius: 3px;    /* Edle Abrundung */
-    opacity: 0.85;         /* Leicht zurückgenommen – sehr elegant */
+.card a:hover {
+  text-decoration: underline;
 }
 
-/* Erfolgsmeldung */
-.success-message {
+.split {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.list-box {
+  background: var(--white);
+  border-left: 6px solid var(--accent);
+  border-radius: 14px;
+  padding: 30px;
+}
+
+.list-box ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.cta-section {
+  background: var(--dark);
+  color: var(--white);
+}
+
+.cta-section p {
+  color: #e7ddd5;
+}
+
+.site-footer {
+  padding: 32px 7%;
+  text-align: center;
+  background: var(--dark);
+  color: var(--white);
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.site-footer a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+  .menu-button {
+    display: block;
+  }
+
+  .main-nav {
     display: none;
-    background: #E3F5E8;
-    color: #2F6B3F;
-    border-left: 4px solid #3FAF60;
-    padding: 14px 18px;
-    margin-top: 20px;
-    font-size: 16px;
-    border-radius: 6px;
-    animation: fadeIn 0.4s ease forwards;
+    position: absolute;
+    top: 70px;
+    right: 7%;
+    left: 7%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+    background: var(--dark);
+    border-radius: 14px;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .cards.three,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .section {
+    padding: 70px 7%;
+  }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-6px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-/* Hero-Divider – Premium-Variante */
-.hero-divider {
-    width: 260px !important;         /* sichtbar breiter */
-    height: 5px !important;          /* etwas kräftiger */
-    background: #C6A27E !important;  /* Gold */
-    margin: 32px auto 40px !important;
-    border-radius: 4px !important;
-    opacity: 1 !important;           /* volle Sichtbarkeit */
-}
-/* Hero-Divider – Premium Gold mit subtiler Textur */
-.hero-divider {
-    width: 260px !important;
-    height: 6px !important;
-    margin: 32px auto 45px !important;
-    border-radius: 4px !important;
 
-    /* Goldfarbe */
-    background: #C6A27E !important;
 
-    /* Subtile Textur (gebürstetes Gold) */
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,0.25) 0%,
-            rgba(255,255,255,0.05) 50%,
-            rgba(255,255,255,0.25) 100%
-        );
-    background-blend-mode: overlay;
+ 
 
-    /* Leichte Glanzwirkung */
-    box-shadow: inset 0 0 3px rgba(0,0,0,0.12);
-}
-/* Hero-Divider – Blattgold-Effekt */
-.hero-divider {
-    width: 260px !important;
-    height: 6px !important;
-    margin: 32px auto 42px !important;
-    border-radius: 4px !important;
-
-    /* Basis-Goldfarbe */
-    background: #c6a27e;
-
-    /* Blattgold / Metallic-TEXTUR */
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,0.45) 0%,
-            rgba(255,255,255,0.15) 20%,
-            rgba(0,0,0,0.08) 40%,
-            rgba(255,255,255,0.35) 60%,
-            rgba(0,0,0,0.05) 80%,
-            rgba(255,255,255,0.4) 100%
-        );
-    background-blend-mode: overlay;
-
-    /* Leichter Metall-Schimmer */
-    box-shadow:
-        inset 0 1px 2px rgba(255,255,255,0.5),
-        inset 0 -1px 2px rgba(0,0,0,0.15),
-        0 1px 3px rgba(0,0,0,0.12);
-}
-/* Optimierter, subtiler Fade zwischen Hero und Leistungen */
-.hero-fade {
-    width: 100%;
-    height: 60px;
-    margin-top: -30px;
-    pointer-events: none;
-
-    background: linear-gradient(
-        to bottom,
-        rgba(247, 243, 239, 0) 0%,
-        rgba(247, 243, 239, 1) 100%
-    );
-}
-.leitgedanke {
-    max-width: 780px;
-    margin: 40px auto 60px;
-    background: #FAF7F3;
-    padding: 40px 35px;
-    border-left: 5px solid #C6A27E;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-}
-
-.leitgedanke h3 {
-    font-family: "Playfair Display", serif;
-    font-size: 28px;
-    margin-bottom: 18px;
-    color: #3F2F2F;
-}
-
-.leitgedanke p {
-    line-height: 1.7;
-    margin-bottom: 18px;
-    color: #4F3F3F;
-}
-/* Kontaktseite Layout */
-.contact-page .section {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* Formular schön zentrieren */
-.contact-page .kontaktform {
-    max-width: 500px;
-    margin: 30px auto 0 auto;
-}
-
-/* Textbreite passend machen */
-.contact-page .kontakt-text {
-    max-width: 600px;
-    margin: 0 auto 25px auto;
-    font-size: 18px;
-    color: #4F3F3F;
-    line-height: 1.6;
-}
+   
 
 
 
