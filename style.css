@@ -176,10 +176,9 @@ h3 {
   padding: 110px 7vw;
 }
 
-.intro .text-block {
-    max-width: 850px;
-    margin: 0 auto;
-    text-align: center;
+.text-block {
+  max-width: 850px;
+  margin: 0 auto;
 }
 
 .text-block p {
