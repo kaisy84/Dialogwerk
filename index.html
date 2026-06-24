@@ -1,122 +1,179 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dialogwerk – Kommunikation in Schulkonflikten</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <title>Dialogwerk – Lerntherapie, LRS, ADHS & Schulbegleitung</title>
+  <meta name="description" content="Dialogwerk begleitet Kinder, Eltern und Familien bei Lernschwierigkeiten, LRS, ADHS, Schulkonflikten und schwieriger Kommunikation mit Schule." />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    <!-- ===========================
-         HEADER / NAVIGATION
-    ============================ -->
-    <header class="header">
-        <a class="logo" href="index.html">Dialogwerk</a>
+<header class="site-header">
+  <a href="index.html" class="logo">Dialogwerk</a>
 
+  <button class="menu-button" onclick="toggleMenu()">☰</button>
 
-        <nav id="nav" class="nav">
-            <a href="#leistungen">Leistungen</a>
-            <a href="ueber.html">Über mich</a>
-            <a href="#kontakt.html">Kontakt</a>
-           
-        </nav>
+  <nav class="main-nav" id="mainNav">
+    <a href="index.html">Start</a>
+    <a href="lerntherapie.html">Lerntherapie</a>
+    <a href="schulbegleitung.html">Schulbegleitung</a>
+    <a href="elternberatung.html">Elternberatung</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
 
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    </header>
+<main>
 
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Lerntherapie · Elternberatung · Schulbegleitung</p>
 
-    <!-- ===========================
-         HERO
-    ============================ -->
-    <section class="hero">
-    <h1>Dialogwerk</h1>
-    <h2>Kommunikation in Schulkonflikten</h2>
+    <h1>Wenn Lernen, Schule und Kommunikation schwierig werden.</h1>
 
-    <div class="hero-divider"></div>
-
-    <p>
-        Struktur. Klarheit. Souveränität.<br><br>
-        Für Eltern, die in schwierigen Schulsituationen Orientierung und Unterstützung suchen.
+    <p class="hero-text">
+      Dialogwerk begleitet Kinder, Eltern und Familien bei Lernschwierigkeiten,
+      LRS, ADHS, Schulkonflikten und belastenden Schulsituationen.
     </p>
 
-    <a href="#kontakt" class="cta">Kontakt aufnehmen</a>
+    <div class="hero-actions">
+      <a href="lerntherapie.html" class="button primary">Lerntherapie ansehen</a>
+      <a href="kontakt.html" class="button secondary">Kontakt aufnehmen</a>
+    </div>
+  </div>
 </section>
 
+<section class="intro section">
+  <div class="narrow">
+    <h2>Manchmal geht es längst nicht mehr nur ums Lernen.</h2>
+    <p>
+      Wenn Hausaufgaben täglich eskalieren, Gespräche mit der Schule belasten
+      oder ein Kind das Vertrauen in sich selbst verliert, brauchen Familien
+      mehr als schnelle Tipps.
+    </p>
+    <p>
+      Dialogwerk verbindet individuelle Lerntherapie mit Elternberatung und
+      klarer Unterstützung in der Kommunikation mit Schule und anderen
+      Beteiligten.
+    </p>
+  </div>
+</section>
 
+<section class="section soft">
+  <div class="section-heading">
+    <p class="eyebrow">Leistungen</p>
+    <h2>Drei Bereiche. Ein gemeinsamer Blick.</h2>
+  </div>
 
-    <!-- ===========================
-         LEISTUNGEN
-    ============================ -->
-    <section id="leistungen" class="section">
-        <h3>Leistungen</h3>
+  <div class="cards three">
+    <article class="card">
+      <h3>Lerntherapie</h3>
+      <p>
+        Unterstützung bei LRS, Legasthenie, ADHS im Lernalltag,
+        Konzentrationsproblemen und allgemeinen Lernschwierigkeiten.
+      </p>
+      <a href="lerntherapie.html">Mehr zur Lerntherapie</a>
+    </article>
 
-        <div class="grid">
+    <article class="card">
+      <h3>Elternberatung</h3>
+      <p>
+        Orientierung für Eltern, die Lernprobleme, Diagnosen, schulische
+        Anforderungen oder häusliche Belastungen besser verstehen möchten.
+      </p>
+      <a href="elternberatung.html">Mehr zur Elternberatung</a>
+    </article>
 
-    <div class="card">
-        <h4>Gesprächsvorbereitung</h4>
-        <p>Präzise Vorbereitung auf schwierige Gespräche mit Lehrkräften, Schulleitung oder Schulamt.</p>
+    <article class="card">
+      <h3>Schulbegleitung</h3>
+      <p>
+        Gesprächsvorbereitung, Analyse schulischer Kommunikation,
+        Dokumentenprüfung und Prozessbegleitung bei schwierigen Schulsituationen.
+      </p>
+      <a href="schulbegleitung.html">Mehr zur Schulbegleitung</a>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="split">
+    <div>
+      <p class="eyebrow">Schwerpunkt Lerntherapie</p>
+      <h2>Lerntherapie bei LRS, ADHS und Lernblockaden</h2>
+      <p>
+        Dialogwerk unterstützt Kinder und Jugendliche, wenn Lesen, Schreiben,
+        Konzentration, Lernorganisation oder Motivation dauerhaft schwerfallen.
+      </p>
+      <p>
+        Im Mittelpunkt steht nicht nur die Leistung, sondern das Kind mit seinen
+        Erfahrungen, Stärken, Unsicherheiten und Bedürfnissen.
+      </p>
     </div>
 
-    <div class="card">
-        <h4>Kommunikationsanalyse</h4>
-        <p>Klarheit über Rollen, Dynamiken und passende Strategien in Schulkonflikten.</p>
+    <div class="list-box">
+      <h3>Typische Themen</h3>
+      <ul>
+        <li>LRS / Legasthenie</li>
+        <li>Leseflüssigkeit und Rechtschreibung</li>
+        <li>ADHS im Lernkontext</li>
+        <li>Konzentration und Selbststeuerung</li>
+        <li>Lernorganisation und Motivation</li>
+        <li>allgemeine Lernbegleitung</li>
+      </ul>
     </div>
+  </div>
+</section>
 
-    <div class="card">
-        <h4>Prozessbegleitung</h4>
-        <p>Längerfristige Unterstützung in komplexen Konfliktsituationen rund um Schule & Elternrolle.</p>
-    </div>
+<section class="section muted">
+  <div class="narrow center">
+    <p class="eyebrow">Haltung</p>
+    <h2>Klar. Bedürfnisorientiert. Systembewusst.</h2>
+    <p>
+      Dialogwerk betrachtet schulische Schwierigkeiten nicht isoliert.
+      Lernen, Emotionen, Familie, Schule und Kommunikation gehören zusammen.
+    </p>
+    <p>
+      Ziel ist nicht Anpassung um jeden Preis, sondern mehr Verstehen,
+      Selbstwirksamkeit und tragfähige nächste Schritte.
+    </p>
+  </div>
+</section>
 
-    <div class="card">
-        <h4>Dokumenten- & Schriftgutprüfung</h4>
-        <p>Sichtung und strategische Einordnung von schulischen Schreiben – inkl. Formulierungsvorschlägen für eine klare und souveräne Antwort.</p>
-    </div>
+<section class="section cta-section">
+  <div class="narrow center">
+    <h2>Der erste Schritt darf einfach sein.</h2>
+    <p>
+      Schreiben Sie kurz, worum es geht. Gemeinsam klären wir, welche Form der
+      Unterstützung passend sein kann.
+    </p>
+    <a href="kontakt.html" class="button primary">Kontakt aufnehmen</a>
+  </div>
+</section>
 
+</main>
 
-    </div>
-    </section>
+<footer class="site-footer">
+  <p>© Dialogwerk</p>
+  <p>
+    <a href="impressum.html">Impressum</a> ·
+    <a href="datenschutz.html">Datenschutz</a>
+  </p>
+</footer>
 
+<script>
+function toggleMenu() {
+  document.getElementById("mainNav").classList.toggle("open");
+}
+</script>
 
-  <!-- ===========================
-         KONTAKT
-    ============================ -->
-    <section id="kontakt" class="section">
-        <h3>Kontakt</h3>
-        <p class="kontakt-subline">Eine Nachricht. Ein klarer erster Schritt.</p>
-
-        <p>Schreiben Sie eine kurze Nachricht – ich melde mich zeitnah bei Ihnen.</p>
-
-        <form class="kontaktform">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="E-Mail" required>
-            <textarea placeholder="Ihre Nachricht" required></textarea>
-            <button type="submit">Absenden</button>
-        </form>
-        <div id="success-message" class="success-message">
-    Danke für Ihre Nachricht. Ich melde mich zeitnah.
-</div>
-
-    </section>
-
-
-    <!-- ===========================
-         FOOTER
-    ============================ -->
-    <footer>
-        <p>
-            © Dialogwerk – Kommunikation in Schulkonflikten |
-            <a href="impressum.html">Impressum</a> |
-            <a href="datenschutz.html">Datenschutz</a>
-        </p>
-    </footer>
-
-   <script src="docs/script.js"></script>
 </body>
 </html>
+    
+   
 
 
 
