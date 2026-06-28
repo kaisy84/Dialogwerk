@@ -251,56 +251,111 @@ h3 {
   border-bottom: 1px solid var(--line);
 }
 
-.services {
-  background: var(--bg);
-}
-
-.section-title {
-  max-width: 850px;
-  margin: 0 auto 60px;
-  text-align: center;
-}
-
-.service-grid {
-  max-width: 1180px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
-}
-
 .service {
-  min-height: 390px;
-  padding: 38px;
-  background: var(--paper);
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  display: flex;
-  flex-direction: column;
+
+  min-height:390px;
+
+  padding:42px;
+
+  background:rgba(255,255,255,.82);
+
+  backdrop-filter:blur(12px);
+
+  border-right:1px solid rgba(0,0,0,.06);
+  border-bottom:1px solid rgba(0,0,0,.06);
+
+  display:flex;
+  flex-direction:column;
+
+  transition:
+      transform .35s ease,
+      box-shadow .35s ease,
+      border-color .35s ease,
+      background .35s ease;
+
 }
 
-.service-number {
-  margin-bottom: 54px;
-  color: var(--accent);
-  font-size: 0.8rem;
-  letter-spacing: 0.14em;
+.service:hover{
+
+    transform:translateY(-8px);
+
+    background:white;
+
+    border-color:#d9cec2;
+
+    box-shadow:
+        0 22px 55px rgba(0,0,0,.08);
+
 }
 
-.service p {
-  color: var(--muted);
-  margin-bottom: 28px;
+.service-number{
+
+    margin-bottom:46px;
+
+    color:var(--accent);
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    letter-spacing:.24em;
+
+    text-transform:uppercase;
+
 }
 
-.service a {
-  margin-top: auto;
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: 700;
+.service h3{
+
+    margin-bottom:18px;
+
+    transition:color .3s ease;
+
 }
 
-.service a:hover {
-  text-decoration: underline;
+.service:hover h3{
+
+    color:var(--accent);
+
+}
+
+.service p{
+
+    color:var(--muted);
+
+    margin-bottom:30px;
+
+}
+
+.service a{
+
+    margin-top:auto;
+
+    text-decoration:none;
+
+    color:var(--accent);
+
+    font-weight:700;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    transition:gap .25s ease;
+
+}
+
+.service a::after{
+
+    content:"→";
+
+}
+
+.service:hover a{
+
+    gap:14px;
+
 }
 
 .focus {
