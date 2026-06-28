@@ -53,7 +53,7 @@ a {
 
 .main-nav {
   display: flex;
-  gap: 26px;
+  gap: 24px;
   align-items: center;
 }
 
@@ -238,16 +238,16 @@ h3 {
 }
 
 .service-grid {
-  max-width: 1040px;
+  max-width: 1180px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
 }
 
 .service {
-  min-height: 370px;
+  min-height: 390px;
   padding: 38px;
   background: var(--paper);
   border-right: 1px solid var(--line);
@@ -264,12 +264,12 @@ h3 {
 .service:hover {
   background: #fffdfb;
   border-color: var(--stone);
-  transform: translateY(-4px);
-  box-shadow: 0 18px 42px rgba(46, 40, 37, 0.07);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(46, 40, 37, 0.06);
 }
 
 .service-number {
-  margin-bottom: 50px;
+  margin-bottom: 54px;
   color: var(--accent);
   font-size: 0.76rem;
   font-weight: 700;
@@ -373,7 +373,7 @@ h3 {
   text-decoration: underline;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 760px) {
   .menu-button {
     display: block;
   }
@@ -455,8 +455,6 @@ h3 {
     text-align: center;
   }
 }
-
-
 
 
       
