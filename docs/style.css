@@ -629,7 +629,63 @@ h3 {
     text-align: center;
   }
 }
+/* ---------- Hero Signature ---------- */
 
+.hero-line{
+    width:220px;
+    height:24px;
+    margin:70px auto 0;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+.hero-line span{
+    height:1px;
+    width:0;
+    background:#b09073;
+    animation:drawLine 1.2s ease forwards;
+}
+
+.hero-circle{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#9f7b5d;
+    margin-left:10px;
+
+    opacity:0;
+    transform:scale(.4);
+
+    animation:showCircle .35s ease forwards;
+    animation-delay:1.15s;
+}
+
+@keyframes drawLine{
+
+    from{
+        width:0;
+    }
+
+    to{
+        width:200px;
+    }
+
+}
+
+@keyframes showCircle{
+
+    from{
+        opacity:0;
+        transform:scale(.4);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
 
 
 
