@@ -346,19 +346,23 @@ h3 {
 }
 
 .service {
-  min-height: 390px;
-  padding: 38px;
-  background: var(--paper);
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  display: flex;
-  flex-direction: column;
-  transition:
-    background 0.28s ease,
-    border-color 0.28s ease,
-    transform 0.28s ease,
-    box-shadow 0.28s ease;
+    min-height: 335px;
+    padding: 46px 42px;
+    background: var(--paper);
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+
+    transition:
+        background .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
 }
+
 
 .service:hover {
   background: #fffdfb;
