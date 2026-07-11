@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -5,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Kontakt – Dialogwerk</title>
-  <meta name="description" content="Kontakt zu Dialogwerk: Nehmen Sie Kontakt auf für Lerntherapie, Elternberatung oder Konfliktbegleitung." />
+  <meta
+    name="description"
+    content="Kontakt zu Dialogwerk für Lerntherapie, Elternberatung und Konfliktbegleitung – persönlich in Nordhessen und online."
+  />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -15,7 +19,14 @@
 <header class="site-header">
   <a class="logo" href="index.html">Dialogwerk</a>
 
-  <button class="menu-button" onclick="toggleMenu()" aria-label="Menü öffnen">
+  <button
+    class="menu-button"
+    type="button"
+    onclick="toggleMenu()"
+    aria-label="Menü öffnen"
+    aria-controls="mainNav"
+    aria-expanded="false"
+  >
     ☰
   </button>
 
@@ -25,133 +36,246 @@
     <a href="konfliktbegleitung.html">Konfliktbegleitung</a>
     <a href="elternberatung.html">Elternberatung</a>
     <a href="impulse.html">Impulse</a>
-    <a href="ueber.html">Über mich</a>
+    <a href="uebermich.html">Über mich</a>
     <a href="kontakt.html">Kontakt</a>
   </nav>
 </header>
 
 <main>
 
-  <section class="hero">
+  <section class="hero contact-hero">
     <div class="hero-content">
       <p class="eyebrow">Kontakt</p>
 
-      <h1>Der erste Schritt darf einfach sein.</h1>
+      <h1>Der erste Schritt beginnt mit einem Gespräch.</h1>
 
       <p class="hero-text">
-        Wenn Sie Fragen haben oder Unterstützung suchen, schreiben Sie mir gerne eine Nachricht.
+        Schreiben Sie mir kurz, was Sie und Ihr Kind gerade beschäftigt.
+        Sie müssen noch nicht genau wissen, welche Unterstützung passend ist.
+      </p>
+
+      <p class="hero-location">
+        Persönlich in Nordhessen · Online deutschlandweit
       </p>
     </div>
   </section>
 
-  <section class="section intro">
-    <div class="text-block">
-      <h2>Kontakt aufnehmen</h2>
+  <section class="section contact-section">
+    <div class="contact-layout">
 
-      <p>
-        Sie können sich melden, wenn Sie unsicher sind, ob Lerntherapie,
-        Elternberatung oder Konfliktbegleitung für Ihre Situation passend ist.
-      </p>
+      <div class="contact-intro">
+        <p class="eyebrow">Ihre Anfrage</p>
 
-      <p>
-        In einem ersten Kontakt klären wir gemeinsam, worum es geht und welcher
-        nächste Schritt sinnvoll sein könnte.
-      </p>
+        <h2>Worum geht es?</h2>
 
-      <p>
-        Schreiben Sie gerne kurz, was Sie beschäftigt und welche Form der
-        Unterstützung Sie suchen.
-      </p>
-    </div>
-  </section>
-
-  <section class="section services">
-    <div class="section-title">
-      <p class="eyebrow">So erreichen Sie mich</p>
-      <h2>Kontaktmöglichkeiten</h2>
-    </div>
-
-    <div class="service-grid">
-
-      <article class="service">
-        <span class="service-number">01</span>
-        <h3>E-Mail</h3>
         <p>
-          Schreiben Sie mir gerne eine Nachricht mit Ihrem Anliegen.
+          Über das Formular können Sie eine erste unverbindliche Anfrage senden.
+          Ich melde mich anschließend persönlich bei Ihnen zurück.
         </p>
-        <a href="mailto:info@dialogwerk-lerntherapie.de">info@dialogwerk-lerntherapie.de</a>
-      </article>
 
-      <article class="service">
-        <span class="service-number">02</span>
-        <h3>Erstgespräch</h3>
         <p>
-          Im Erstgespräch klären wir, welche Fragen im Vordergrund stehen und
-          welche Unterstützung sinnvoll sein kann.
+          Beschreiben Sie die Situation gern in wenigen Sätzen. Für eine erste
+          Einschätzung reichen die Informationen, die Sie im Moment geben möchten.
         </p>
-      </article>
 
-      <article class="service">
-        <span class="service-number">03</span>
-        <h3>Vor Ort & Online</h3>
-        <p>
-          Lerntherapie, Elternberatung und Konfliktbegleitung können je nach
-          Anliegen vor Ort oder online stattfinden.
-        </p>
-      </article>
+        <div class="contact-note">
+          <h3>Hilfreich für den ersten Kontakt</h3>
 
-    </div>
-  </section>
-
-  <section class="section focus">
-    <div class="focus-inner">
-      <div>
-        <p class="eyebrow">Ihre Nachricht</p>
-        <h2>Hilfreich für den ersten Kontakt.</h2>
+          <ul>
+            <li>Alter und Klassenstufe des Kindes</li>
+            <li>das derzeitige Anliegen</li>
+            <li>vorhandene Diagnosen, falls relevant</li>
+            <li>gewünschte Form der Unterstützung</li>
+          </ul>
+        </div>
       </div>
 
-      <div>
-        <p>
-          Damit ich Ihr Anliegen besser einordnen kann, können Sie in Ihrer
-          Nachricht kurz beschreiben, worum es geht.
-        </p>
+      <div class="contact-form-wrap">
 
-        <ul>
-          <li>Alter und Klassenstufe des Kindes</li>
-          <li>aktuelles Anliegen oder Belastung</li>
-          <li>bestehende Diagnose, falls vorhanden</li>
-          <li>gewünschte Unterstützung</li>
-          <li>ob Beratung vor Ort oder online gewünscht ist</li>
-        </ul>
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/xgogwoay"
+          method="POST"
+        >
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="Neue Anfrage über Dialogwerk"
+          />
+
+          <div class="form-honeypot" aria-hidden="true">
+            <label for="website">Website</label>
+            <input
+              type="text"
+              id="website"
+              name="_gotcha"
+              tabindex="-1"
+              autocomplete="off"
+            />
+          </div>
+
+          <fieldset class="form-topic">
+            <legend>Wobei kann ich Sie unterstützen?</legend>
+
+            <div class="topic-options">
+
+              <label class="topic-option">
+                <input
+                  type="radio"
+                  name="Anliegen"
+                  value="Lerntherapie"
+                  required
+                />
+                <span>Lerntherapie</span>
+              </label>
+
+              <label class="topic-option">
+                <input
+                  type="radio"
+                  name="Anliegen"
+                  value="Elternberatung"
+                />
+                <span>Elternberatung</span>
+              </label>
+
+              <label class="topic-option">
+                <input
+                  type="radio"
+                  name="Anliegen"
+                  value="Konfliktbegleitung"
+                />
+                <span>Konfliktbegleitung</span>
+              </label>
+
+              <label class="topic-option">
+                <input
+                  type="radio"
+                  name="Anliegen"
+                  value="Noch unsicher"
+                />
+                <span>Ich bin noch unsicher</span>
+              </label>
+
+            </div>
+          </fieldset>
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="Name"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-Mail-Adresse</label>
+              <input
+                type="email"
+                id="email"
+                name="E-Mail"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+          </div>
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label for="phone">
+                Telefonnummer
+                <span class="optional">optional</span>
+              </label>
+
+              <input
+                type="tel"
+                id="phone"
+                name="Telefon"
+                autocomplete="tel"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="child-age">
+                Alter des Kindes
+                <span class="optional">optional</span>
+              </label>
+
+              <input
+                type="text"
+                id="child-age"
+                name="Alter des Kindes"
+                inputmode="numeric"
+              />
+            </div>
+
+          </div>
+
+          <div class="form-group">
+            <label for="message">Ihre Nachricht</label>
+
+            <textarea
+              id="message"
+              name="Nachricht"
+              rows="8"
+              required
+              placeholder="Beschreiben Sie kurz, worum es geht."
+            ></textarea>
+          </div>
+
+          <div class="privacy-check">
+            <input
+              type="checkbox"
+              id="privacy"
+              name="Datenschutz bestätigt"
+              value="Ja"
+              required
+            />
+
+            <label for="privacy">
+              Ich habe die
+              <a href="datenschutz.html" target="_blank" rel="noopener">
+                Datenschutzerklärung
+              </a>
+              gelesen und stimme der Verarbeitung meiner Angaben zur Bearbeitung
+              meiner Anfrage zu.
+            </label>
+          </div>
+
+          <div class="form-submit">
+            <button class="button dark" type="submit">
+              Nachricht senden
+            </button>
+
+            <p class="form-hint">
+              Pflichtfelder sind erforderlich, damit ich Ihnen antworten kann.
+            </p>
+          </div>
+
+        </form>
+
       </div>
+
     </div>
   </section>
 
   <section class="section attitude">
     <div class="text-block center">
-      <p class="eyebrow">Wichtig</p>
+      <p class="eyebrow">Unverbindlich</p>
 
-      <h2>Ein erster Kontakt verpflichtet zu nichts.</h2>
-
-      <p>
-        Manchmal reicht schon ein erstes Sortieren, um klarer zu sehen.
-      </p>
+      <h2>Eine Anfrage verpflichtet zu nichts.</h2>
 
       <p>
-        Gemeinsam schauen wir, ob und wie Dialogwerk Sie sinnvoll unterstützen kann.
+        Im ersten Kontakt klären wir, worum es geht und ob Dialogwerk für Ihre
+        Situation die passende Unterstützung anbieten kann.
       </p>
-    </div>
-  </section>
-
-  <section class="section cta">
-    <div class="text-block center">
-      <h2>Schreiben Sie mir gerne.</h2>
-
-      <p>
-        Ich melde mich so bald wie möglich zurück.
-      </p>
-
-      <a href="mailto:info@dialogwerk-lerntherapie.de" class="button dark">E-Mail schreiben</a>
     </div>
   </section>
 
@@ -159,6 +283,7 @@
 
 <footer class="site-footer">
   <p>© Dialogwerk</p>
+
   <p>
     <a href="impressum.html">Impressum</a>
     <span>·</span>
@@ -170,3 +295,7 @@
 
 </body>
 </html>
+```
+
+  
+       
