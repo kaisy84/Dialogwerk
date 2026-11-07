@@ -9,13 +9,13 @@
   --accent: #9f7b5d;
   --line: #e2d8ce;
 
-  --max-text: 880px;
-  --max-wide: 1280px;
-  --max-focus: 1140px;
+  /* Schmaler content measure; section BGs stay full-bleed (no empty side voids) */
+  --max-text: 560px;
+  --max-wide: 820px;
+  --max-focus: 720px;
 
   --header-height: 60px;
-  /* Cap desktop side gutters; keep ~20px on phones */
-  --page-gutter: clamp(1.25rem, 3vw, 2.5rem);
+  --page-gutter: clamp(1.1rem, 2.4vw, 1.5rem);
   --section-space: 72px;
   --section-space-mobile: 52px;
 
@@ -65,7 +65,7 @@ a {
   top: 0;
   z-index: 100;
   height: var(--header-height);
-  padding: 0 var(--page-gutter);
+  padding: 0 max(var(--page-gutter), calc((100% - var(--max-wide)) / 2));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -83,7 +83,7 @@ a {
 
 .main-nav {
   display: flex;
-  gap: 18px;
+  gap: 16px;
   align-items: center;
 }
 
@@ -118,7 +118,8 @@ a {
 }
 
 .hero-content {
-  max-width: 960px;
+  max-width: 640px;
+  width: 100%;
   text-align: center;
 }
 
@@ -158,7 +159,7 @@ h3 {
 }
 
 .hero-text {
-  max-width: 720px;
+  max-width: var(--max-text);
   margin: 0 auto var(--space-lead);
   color: var(--muted);
   font-size: var(--fs-lead);
@@ -324,7 +325,7 @@ h3 {
 }
 
 .site-footer {
-  padding: 26px var(--page-gutter);
+  padding: 26px max(var(--page-gutter), calc((100% - var(--max-wide)) / 2));
   display: flex;
   justify-content: space-between;
   gap: 16px;

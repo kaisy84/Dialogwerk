@@ -23,13 +23,13 @@
   --shadow-soft: 0 14px 34px rgba(46, 40, 37, 0.06);
   --shadow-button: 0 10px 22px rgba(46, 40, 37, 0.14);
 
-  --max-text: 880px;
-  --max-wide: 1280px;
-  --max-focus: 1140px;
+  /* Schmaler content measure; section BGs stay full-bleed (no empty side voids) */
+  --max-text: 560px;
+  --max-wide: 820px;
+  --max-focus: 720px;
 
   --header-height: 60px;
-  /* Cap desktop side gutters; keep ~20px on phones */
-  --page-gutter: clamp(1.25rem, 3vw, 2.5rem);
+  --page-gutter: clamp(1.1rem, 2.4vw, 1.5rem);
   --section-space: 72px;
   --section-space-mobile: 52px;
 
@@ -93,7 +93,8 @@ img {
   top: 0;
   z-index: 100;
   height: var(--header-height);
-  padding: 0 var(--page-gutter);
+  /* Full-bleed bar; logo/nav align to the narrow content column */
+  padding: 0 max(var(--page-gutter), calc((100% - var(--max-wide)) / 2));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -131,7 +132,7 @@ img {
 
 .main-nav {
   display: flex;
-  gap: 18px;
+  gap: 16px;
   align-items: center;
 }
 
@@ -194,29 +195,17 @@ img {
     var(--bg);
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 1.5rem calc(var(--page-gutter) * 0.7);
-  border: 1px solid rgba(226, 216, 206, 0.5);
-  pointer-events: none;
-}
-
+/* No inset hero frame — that created empty side bands around a floating card */
+.hero::before,
 .hero::after {
-  content: "";
-  position: absolute;
-  right: calc(var(--page-gutter) * 0.7 + 0.35rem);
-  bottom: 1.4rem;
-  width: 88px;
-  height: 1px;
-  background: rgba(159, 123, 93, 0.42);
-  pointer-events: none;
+  display: none;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 960px;
+  max-width: 640px;
+  width: 100%;
   text-align: center;
 }
 
@@ -256,7 +245,7 @@ h3 {
 }
 
 .hero-text {
-  max-width: 720px;
+  max-width: var(--max-text);
   margin: 0 auto var(--space-lead);
   color: var(--muted);
   font-size: var(--fs-lead);
@@ -355,7 +344,7 @@ h3 {
   border-bottom: 1px solid var(--line);
 }
 .intro .text-block {
-    max-width: 800px;
+    max-width: var(--max-text);
     margin: 0 auto;
     text-align: center;
 }
@@ -500,7 +489,7 @@ h3 {
 /* Footer */
 
 .site-footer {
-  padding: 26px var(--page-gutter);
+  padding: 26px max(var(--page-gutter), calc((100% - var(--max-wide)) / 2));
   display: flex;
   justify-content: space-between;
   gap: 16px;
@@ -556,7 +545,7 @@ h3 {
 
 @media (max-width: 1080px) {
   .main-nav {
-    gap: 14px;
+    gap: 10px;
   }
 
   .main-nav a {
@@ -564,7 +553,7 @@ h3 {
   }
 
   .service-grid {
-    max-width: 1120px;
+    max-width: 100%;
   }
 }
 
@@ -610,7 +599,7 @@ h3 {
   }
 
   .service-grid {
-    max-width: min(640px, 100%);
+    max-width: 100%;
     grid-template-columns: 1fr;
   }
 
@@ -623,7 +612,7 @@ h3 {
   }
 
   .focus-inner {
-    max-width: min(820px, 100%);
+    max-width: 100%;
     grid-template-columns: 1fr;
     gap: 24px;
   }
@@ -644,16 +633,6 @@ h3 {
     min-height: auto;
     padding-top: 3rem;
     padding-bottom: 3rem;
-  }
-
-  .hero::before {
-    inset: 1rem 1.1rem;
-  }
-
-  .hero::after {
-    right: 1.5rem;
-    bottom: 1.5rem;
-    width: 72px;
   }
 
   .hero-text,
@@ -735,8 +714,8 @@ h3 {
     max-width:var(--max-wide);
     margin:0 auto;
     display:grid;
-    grid-template-columns:360px 1fr;
-    gap:48px;
+    grid-template-columns:minmax(0, 260px) minmax(0, 1fr);
+    gap:28px;
     align-items:start;
 }
 
